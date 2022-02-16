@@ -12,24 +12,24 @@ class Board {
   }
 
   fillBoard() {
+    let scores = [
+      { f: 1, s: 4 },
+      { f: 4, s: 5 },
+      { f: 6, s: 4 },
+      { f: 5, s: 5 },
+      { f: 10, s: 0 },
+      { f: 0, s: 1 },
+      { f: 7, s: 3 },
+      { f: 6, s: 4 },
+      { f: 10, s: 0 },
+      { f: 2, s: 6 },
+    ];
+
     let board = this.createBoard();
     for (let i = 0; i < board.length; i++) {
-      board[i] = new Frame();
+      board[i] = new Frame(scores[i]);
     }
     return board;
-  }
-
-  setScores() {
-    this.board[0].setTurns(1, 4);
-    this.board[1].setTurns(4, 5);
-    this.board[2].setTurns(6, 4);
-    this.board[3].setTurns(5, 5);
-    this.board[4].setTurns(10, 0);
-    this.board[5].setTurns(0, 1);
-    this.board[6].setTurns(7, 3);
-    this.board[7].setTurns(6, 4);
-    this.board[8].setTurns(10, 0);
-    this.board[9].setTurns(2, 6);
   }
 }
 
