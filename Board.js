@@ -60,6 +60,37 @@ class Board {
       }
     }
   }
+
+  printBoard() {
+    let b = this.board;
+    console.log(
+      '_____________________________________________________________'
+    );
+    console.log(
+      '|__1__|__2__|__3__|__4__|__5__|__6__|__7__|__8__|__9__|__10___|'
+    );
+
+    let turnsString = '';
+    let scoreString = '';
+    for (let i = 0; i < b.length; i++) {
+      turnsString += `|  ${b[i].turnOne == 10 ? ' ' : b[i].turnOne}|${
+        b[i].shotType == 'spare'
+          ? '/'
+          : b[i].shotType == 'strike'
+          ? 'X'
+          : b[i].turnTwo
+      }`;
+      if (i == 9) {
+        turnsString += `|${b[i].turnThree}|`;
+      }
+      scoreString += `|  ${b[i].score} `;
+    }
+    console.log(turnsString);
+    console.log(scoreString);
+    console.log(
+      "-----'-----'-----'-----'-----'-----'-----'-----'-----'---------"
+    );
+  }
 }
 
 module.exports = Board;
