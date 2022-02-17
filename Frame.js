@@ -24,12 +24,6 @@ class Frame {
 
     return type;
   }
-  // calculateScore() {
-  //   let turnOne = this.turnOne;
-  //   let turnTwo = this.turnTwo;
-
-  //   return turnOne + turnTwo;
-  // }
 }
 
 module.exports = Frame;
